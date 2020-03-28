@@ -17,19 +17,25 @@
       </div>
     </transition>
     <EbookSettingFont></EbookSettingFont>
+    <EbookSettingTheme></EbookSettingTheme>
+    <EbookSettingProgress></EbookSettingProgress>
     <EbookSettingFontPopup></EbookSettingFontPopup>
 </div>
 </template>
 
 <script>
 import EbookSettingFont from '../ebook/EbookSettingFont';
+import EbookSettingTheme from '../ebook/EbookSettingTheme';
 import EbookSettingFontPopup from '../ebook/EbookSettingFontPopup';
+import EbookSettingProgress from '../ebook/EbookSettingProgress';
 import {ebookMixin} from '../../utills/mixin'
 export default {
   mixins: [ebookMixin],
   components: {
       EbookSettingFont,
-      EbookSettingFontPopup
+      EbookSettingFontPopup,
+      EbookSettingTheme,
+      EbookSettingProgress
   },
   props: {
 

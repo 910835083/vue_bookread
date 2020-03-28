@@ -31,6 +31,7 @@
 <script>
 import {FONT_SIZE_LIST} from '../../utills/book';
 import {ebookMixin} from '../../utills/mixin';
+import { saveFontSize } from '../../utills/localStorage';
 export default {
   mixins:[ebookMixin],
   components: {
@@ -45,6 +46,7 @@ export default {
   methods: {
       setFontSize(fontSize){
           this.setDefaultFontSize(fontSize)
+          saveFontSize(this.fileName, fontSize)
           this.currentBook.rendition.themes.fontSize(fontSize)
       },
       showFontFamilyPopup(){
